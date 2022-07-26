@@ -1,0 +1,60 @@
+<div class="list row">
+  <div class="col-md-8">
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search by title"
+        [(ngModel)]="title"
+      >
+      <div class="input-group-append">
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          (click)="searchTitle()"
+        >
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <h4>Coworker List</h4>
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let coworker of coworkers; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActiveCoworker(coworker, i)"
+      >
+        {{ coworker.title }}
+      </li>
+    </ul>
+    <button class="m-3 btn btn-sm btn-danger" (click)="removeAllCoworkers()">
+      Remove All
+    </button>
+  </div>
+  <div class="col-md-6">
+    <div *ngIf="currentCoworker">
+      <h4>Coworker</h4>
+      <div>
+        <label><strong>Title:</strong></label> {{ currentCoworker.title }}
+      </div>
+      <div>
+        <label><strong>Description:</strong></label>
+        {{ currentCoworker.description }}
+      </div>
+      <div>
+        <label><strong>Status:</strong></label>
+        {{ currentCoworker.published ? "Published" : "Pending" }}
+      </div>
+      <a class="badge badge-warning" routerLink="/tutorials/{{ currentCoworker.id }}">
+        Edit
+      </a>
+    </div>
+    <div *ngIf="!currentCoworker">
+      <br />
+      <p>Please click on a Coworker...</p>
+    </div>
+  </div>
+</div>

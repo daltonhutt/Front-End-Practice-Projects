@@ -3,7 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+<<<<<<< HEAD
     "employeemanagerapp": {
+=======
+    "CoworkerFrontEnd": {
+>>>>>>> e4b4710d10ce29a57a718701c56904cd044856f8
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +21,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+<<<<<<< HEAD
             "outputPath": "dist/employeemanagerapp",
+=======
+            "outputPath": "dist/coworker-front-end",
+>>>>>>> e4b4710d10ce29a57a718701c56904cd044856f8
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,10 +76,17 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
+<<<<<<< HEAD
               "browserTarget": "employeemanagerapp:build:production"
             },
             "development": {
               "browserTarget": "employeemanagerapp:build:development"
+=======
+              "browserTarget": "CoworkerFrontEnd:build:production"
+            },
+            "development": {
+              "browserTarget": "CoworkerFrontEnd:build:development"
+>>>>>>> e4b4710d10ce29a57a718701c56904cd044856f8
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +94,11 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
+<<<<<<< HEAD
             "browserTarget": "employeemanagerapp:build"
+=======
+            "browserTarget": "CoworkerFrontEnd:build"
+>>>>>>> e4b4710d10ce29a57a718701c56904cd044856f8
           }
         },
         "test": {
